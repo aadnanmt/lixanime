@@ -1,10 +1,14 @@
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Detail from './pages/Detail';
+
 function App() {
   return (
-    <div className="p-10 text-center">
-      <h1 className="text-4xl font-bold text-purple-500">Lixanime</h1>
-      <p className="mt-4 text-slate-400">Project baru dimulai!</p>
-    </div>
-  )
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/anime/:id" element={<Detail />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
